@@ -4,6 +4,9 @@ header {
 	padding-top: 10px;
 }
 
+.when-affixed { display: none; }
+.affix .when-affixed { display: initial; }
+
 .links-content {
 	float: left;
 	margin-bottom: 5px;
