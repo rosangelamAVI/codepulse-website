@@ -1,0 +1,14 @@
+.section {
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+
+.carousel-section {
+	height: 700px; 
+	/* adjust with #screenshot-carousel height to account for aspect ratio */
+}
+
+#screenshot-carousel {
+	width: 900px;
+	margin: auto;
+}

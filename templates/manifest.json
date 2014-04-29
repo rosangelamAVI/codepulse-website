@@ -1,5 +1,5 @@
 {
 	"index": "index.template.html",
-	"section1": "section1.template.html",
+	"screenshot-carousel": "screenshot-carousel.template.html",
 	"section2": "section2.template.html"
 }

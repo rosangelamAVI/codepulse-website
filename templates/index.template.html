@@ -2,12 +2,19 @@
 <html>
 	<head>
 		<title>Code Pulse</title>
-		<link rel="stylesheet" href="deps/stuff.css"/>
+		<script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+		<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="deps/index.css"/>
+		<link rel="stylesheet" href="deps/carousel.css"/>
 	</head>
 	<body>
 		This is the first line.
 
-		<div class="section" id="section1">{{> section1}}</div>
+		<div class="section carousel-section">
+			{{> screenshot-carousel}}
+		</div>
+
 		<div class="section" id="section2">{{> section2}}</div>
 	</body>
 </html>
