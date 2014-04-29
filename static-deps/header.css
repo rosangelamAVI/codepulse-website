@@ -1,5 +1,77 @@
-.header-container {
+header {
 	background-color: #323232;
-	border-bottom: 2px solid lightgray;
 	color: white;
+	padding-top: 10px;
+}
+
+.links-content {
+	float: left;
+	margin-bottom: 5px;
+}
+
+.branding-content {
+	display: inline-block;
+	float: right;
+}
+
+.project-name {
+	font-size: 3em;
+	letter-spacing: -3px;
+}
+
+.links-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.links-list > li {
+	display: inline-block;
+}
+
+.links-list > li a {
+	color: lightgray;
+	font-size: 1.2em;
+	text-decoration: none;
+}
+
+.links-list > li:not(:first-child) a {
+	margin-left: 15px;
+}
+
+.links-list > li a:hover {
+	color: white;
+}
+
+.navigation {
+	padding: 5px;
+	background-color: #444;
+	border-bottom: 2px solid lightgray;
+}
+
+.navigation-placeholder {
+	/* stands in place of the navigation when the header is affixed,
+	 * so the layout doesn't shift due to the missing 36 pixels
+	 */
+	height: 36px;
+	display: none;
+}
+
+header.affix {
+	/* bootstrap's default is to put position:fixed on an .affix element.
+	 * We're putting it on the container, but only want certain content
+	 * to be fixed.
+	 */
+	position: static;
+}
+
+header.affix .navigation {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+}
+
+header.affix .navigation-placeholder {
+	display: block;
 }
