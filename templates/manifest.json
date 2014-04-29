@@ -1,5 +1,8 @@
 {
 	"index": "index.template.html",
 	"screenshot-carousel": "screenshot-carousel.template.html",
-	"features": "features.template.html"
+	"why": "why.template.html",
+	"features": "features.template.html",
+	"footer": "footer.template.html",
+	"header": "header.template.html"
 }

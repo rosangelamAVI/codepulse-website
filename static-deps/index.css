@@ -1,12 +1,40 @@
 body {
-	min-width: 900px;
+	min-width: 940px;
 }
 
+h1 {
+	border-bottom: 1px solid lightgray;
+}
+
+header, footer {
+	background-color: #323232;
+	color: white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+header { border-bottom: 2px solid lightgray; }
+footer { border-top: 2px solid lightgray; }
+
+/* articles are top-level elements that define
+ * vertical spacing around themselves
+ */
+article {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+/* sections are horizontal layout elements
+ * that can be used inside other elements
+ */
 .section {
-	padding-top: 2em;
-	padding-bottom: 2em;
-	width: 900px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 940px;
 	margin: auto;
+	position: relative;
+
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
 
 .carousel-section {

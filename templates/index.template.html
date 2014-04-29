@@ -8,14 +8,26 @@
 		<link rel="stylesheet" href="deps/index.css"/>
 		<link rel="stylesheet" href="deps/carousel.css"/>
 		<link rel="stylesheet" href="deps/features.css"/>
+		<link rel="stylesheet" href="deps/footer.css"/>
+		<link rel="stylesheet" href="deps/header.css"/>
 	</head>
 	<body>
-		This is the first line.
+		{{> header}}
 
-		<div class="section carousel-section">
+		<article class="section carousel-section">
 			{{> screenshot-carousel}}
-		</div>
+		</article>
 
-		<div class="section" id="features">{{> features}}</div>
+		<article class="section" id="features">
+			<h1>Features</h1>
+			{{> features}}
+		</article>
+
+		<article class="section" id="why">
+			<h1>Why Code Pulse?</h1>
+			{{> why}}
+		</article>
+
+		{{> footer}}
 	</body>
 </html>
