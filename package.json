@@ -1,0 +1,10 @@
+{
+	"name": "code-pulse.com",
+	"version": "0.0.1-SNAPSHOT",
+	"dependencies": {
+		"handlebars": "*",
+		"rimraf": "*",
+		"mkdirp": "*",
+		"ncp": "*"
+	}
+}
