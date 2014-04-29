@@ -4,5 +4,7 @@
 	"why": "why.template.html",
 	"features": "features.template.html",
 	"footer": "footer.template.html",
-	"header": "header.template.html"
+	"header": "header.template.html",
+	"faq": "faq.template.html",
+	"faq-block": "faq-block.template.html"
 }

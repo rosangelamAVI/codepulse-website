@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Code Pulse</title>
+		<script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+		<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="deps/index.css"/>
+	</head>
+	<body>
+		<h1>Frequently Asked Questions</h1>
+
+		<div class="panel-group" id="faq">
+		{{#faqs}}
+			{{> faq-block}}
+		{{/faqs}}
+		</div>
+	</body>
+</html>

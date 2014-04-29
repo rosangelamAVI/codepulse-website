@@ -1,0 +1,37 @@
+[
+	{
+		"id": "how-do-i",
+		"question": "How do I run/use Code Pulse?",
+		"answer": "Code Pulse is a desktop application that runs on Windows, Mac OS X, and Linux. You can &lt;download it&gt; and follow the &lt;these instructions&gt; on how to get started with using it."
+	}, {
+		"id": "what-languages",
+		"question": "What languages/platforms can Code Pulse monitor?",
+		"answer": [
+			"We presently support applications written in Java. Technically any language that runs on the JVM is supported, although how we organize and group the logical code constructs in Code Pulse might not be best suited for non-Java languages.",
+			"We are looking to add support for additional languages and platforms. High on that list is C# and .NET. Please let us know if there's a language/platform that you're particularly interested in."
+		]
+	}, {
+		"id": "do-i-need-modifications",
+		"question": "Do I need to modify my application for Code Pulse to monitor it?",
+		"answer": "No, you don't need to modify your application. Code Pulse uses a JVM agent to instrument your application at runtime. That means that we don't need you to modify your source or byte code. We automatically inject callbacks in your methods when your classes are being loaded. That's how we know when a method is covered or not. All you need to do is to startup your JVM with a special flag to load our agent within its context. You can find instruction on how to do that &lt;here&gt;."
+	}, {
+		"id": "how-accurate",
+		"question": "How accurate is the Code Pulse coverage information?",
+		"answer": [
+			"Code Pulse observes coverage at the method level of detail. So if a method is called, we flag it as being covered. We do realize that a source-line level of monitoring would give more accurate results, but in the current iteration of things we drew the line (no pun intended) at the method level for performance reasons. We will be looking at ways to make the jump to source line level-of-detail in future iterations of Code Pulse.",
+			"For JSP files we flag the whole file as covered if it is called. Again, we do realize that line-level would be more accurate and it's something we want to work towards. But we think there's already a lot of value to know what JSP files were called and when until we add support for more detailed coverage information."
+		]
+	}, {
+		"id": "do-you-monitor-everything",
+		"question": "Do you monitor all activity in the JVM?",
+		"answer": "No. When using Code Pulse you set a flag for each part of the application that you want monitored/traced. We try to be smart about it and pick what we think are the most relevant packages or JSP files, but you can easily override that. You can even trace third party dependencies if you choose. Just keep in mind that the more you ask us to trace, the higher the resulting performance impact will be. We suggest that you start small first to get a feel for things and then increase what you trace as you get a better understanding of how much Code Pulse can handle with your application."
+	}, {
+		"id": "does-it-impact-performance",
+		"question": "Does Code Pulse impact the performance of the monitored applications?",
+		"answer": "The short answer is yes. The long answer is that we've gone out of our way to minimize that performance hit. It's hard to quantify the impact of our instrumentation, but in our measurements we seem to impact web applications with a 1.5-2.5x performance slowdown. For most web applications this is barely noticeable but if you have an application that's CPU-bound, you will most likely notice the performance reduction. As far as memory consumption goes we do offer settings to reduce our memory footprint, but we suggest that you don't change those unless you're memory constrained. In most situations, Code Pulse uses very little memory in the monitored JVM."
+	}, {
+		"id": "how-can-i-help",
+		"question": "How can I help?",
+		"answer": "Thanks for asking. There's plenty to do. You can help us with our &lt;wiki documentation&gt;, report bugs to our &lt;issue tracker&gt;, and help us spread the word about Code Pulse! If you're feeling adventurous you can fork our code and fix any of the &lt;current issues&gt;, take a first stab at some of our &lt;roadmap tasks&gt;, or extend the application as you see fit and submit a pull request."
+	}
+]

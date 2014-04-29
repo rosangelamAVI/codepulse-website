@@ -1,0 +1,14 @@
+<div class="panel">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a data-toggle="collapse" data-parent="#faq" href="#{{ id }}">
+				{{ question }}
+			</a>
+		</h4>
+	</div>
+	<div class="panel-collapse collapse" id="{{ id }}">
+		<div class="panel-body">
+		{{#answer}}<p>{{{ . }}}</p>{{/answer}}
+		</div>
+	</div>
+</div>

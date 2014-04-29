@@ -11,7 +11,8 @@ var handlebars = require('handlebars'),
 	key, 
 	relPath, 
 	templatePath, 
-	source
+	source,
+	faqData = require('./data/faqs')
 
 // generate handlebars templates from the templateManifest,
 // and register each one as partials
@@ -30,6 +31,11 @@ mkdirp.sync(baseDistPath)
 var indexSource = templates['index'](),
 	indexPath = path.join(baseDistPath, 'index.html')
 fs.writeFileSync(indexPath, indexSource, 'utf-8')
+
+// generate dist/faq.html
+var faqSource = templates['faq']({ "faqs": faqData }),
+	faqPath = path.join(baseDistPath, 'faq.html')
+fs.writeFileSync(faqPath, faqSource, 'utf-8')
 
 function copyFile(basePath, newPath, file){
 	var oldPath = path.join(basePath, file),
