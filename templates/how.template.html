@@ -1,0 +1,37 @@
+<div class="row">
+	<div class="col-sm-7">
+		<ol id="how-list">
+			<li data-step="how-download">Download &amp; run Code Pulse</li>
+			<li data-step="how-point">Point Code Pulse at the bytecode</li>
+			<li data-step="how-agent">Setup the agent and start your app</li>
+			<li data-step="how-monitor">Monitor in real-time!</li>
+		</ol>
+	</div>
+	<div class="col-sm-5">
+		<div id="how-steps">
+			<div id="how-download" class="step">
+				<img class="pull-right" src="deps/img/download-zip.png" />
+				<div class="caption">Download Code Pulse, extract the zip archive, and run the application.</div>
+				<div class="clearfix"></div>
+				<a class="step-link" href="#">Detailed Installation Instructions</a>
+			</div>
+			<div id="how-point" class="step">
+				<img class="pull-right" src="deps/img/code-pulse-new-project.png" />
+				<div class="caption">Create a new project and pass it your war/jar/zip so that it can index your application inventory.</div>
+				<div class="clearfix"></div>
+				<a class="step-link" href="#">Creating Code Pulse Projects Instructions</a>
+			</div>
+			<div id="how-agent" class="step">
+				<div class="caption">Pass an extra flag to your application's JVM startup so that we can monitor it, and start it up.</div>
+				<div class="agent-string">-javaagent:CodePulse/agent.jar=localhost:8765</div>
+				<a class="step-link" href="#">Agent Configuration Instructions</a>
+			</div>
+			<div id="how-monitor" class="step">
+				<img class="pull-right" src="deps/img/code-pulse-monitor.png" />
+				<div class="caption">Code Pulse receives the coverage data while your application runs and shows it to you in realtime!</div>
+				<div class="clearfix"></div>
+				<a class="step-link" href="#">Tracing Instructions</a>
+			</div>
+		</div>
+	</div>
+</div>

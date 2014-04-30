@@ -3,6 +3,7 @@
 	"screenshot-carousel": "screenshot-carousel.template.html",
 	"why": "why.template.html",
 	"features": "features.template.html",
+	"how": "how.template.html",
 	"footer": "footer.template.html",
 	"header": "header.template.html",
 	"faq": "faq.template.html",

@@ -57,7 +57,9 @@ generateTemplateOutput('index', 'index.html', {
 	includes: [
 		{css: "deps/carousel.css"},
 		{css: "deps/features.css"},
-		{css: "deps/why.css"}
+		{css: "deps/why.css"},
+		{css: 'deps/how.css'},
+		{js:  'deps/how.js'}
 	]
 })
 
