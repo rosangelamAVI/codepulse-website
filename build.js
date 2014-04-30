@@ -55,7 +55,6 @@ function generateTemplateOutput(templateName, outputRelPath, templateData){
 generateTemplateOutput('index', 'index.html', {
 	navLinks: require('./data/index-navigation'),
 	includes: [
-		{css: "deps/index.css"},
 		{css: "deps/carousel.css"},
 		{css: "deps/features.css"},
 		{css: "deps/why.css"}

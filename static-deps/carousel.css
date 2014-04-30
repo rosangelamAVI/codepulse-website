@@ -1,3 +1,8 @@
+.carousel-wrapper {
+	height: 674px;
+	/* adjust with #screenshot-carousel height to account for aspect ratio */
+}
+
 .carousel-caption {
 	background-color: rgba(0,0,0,0.5);
 	left: 0;
