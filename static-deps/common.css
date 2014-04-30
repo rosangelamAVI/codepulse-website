@@ -53,5 +53,6 @@ article h1 {
 }
 
 .section.narrow {
-
+	padding-left: 150px;
+	padding-right: 150px;
 }
