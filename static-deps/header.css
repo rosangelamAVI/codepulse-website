@@ -17,9 +17,13 @@ header {
 	float: right;
 }
 
-.project-name {
+a.project-name {
 	font-size: 3em;
 	letter-spacing: -3px;
+
+	/* undo link styles */
+	color: white;
+	text-decoration: none;
 }
 
 .links-list {
