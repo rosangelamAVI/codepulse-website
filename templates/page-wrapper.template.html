@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{pageTitle}}</title>
+
+		<!-- default required JS anc CSS files -->
+		<script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+		<link rel="stylesheet" 
+			href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet"
+			href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"/>
+		<link rel="stylesheet" href="deps/common.css"/>
+		<link rel="stylesheet" href="deps/header.css"/>
+
+		<!-- page-specific JS and CSS files -->
+		{{> head-includes}}
+	</head>
+	<body>
+		<div class="full-height-wrapper">
+			{{> header}}
+
+			<!-- page-specific content -->
+			{{{__wrapped_content}}}
+		</div>
+		{{> footer}}
+	</body>
+</html>

@@ -7,40 +7,70 @@ var handlebars = require('handlebars'),
 	templateManifest = require('./templates/manifest'),
 	baseTemplatePath = './templates',
 	baseDistPath = './dist',
-	templates = {}, 
-	key, 
-	relPath, 
-	templatePath, 
-	source,
+	templates = {},
 	faqData = require('./data/faqs')
 
 // generate handlebars templates from the templateManifest,
 // and register each one as partials
-for(key in templateManifest){
-	relPath = templateManifest[key]
-	templatePath = path.join(baseTemplatePath, relPath)
-	source = fs.readFileSync(templatePath, 'utf-8')
-	templates[key] = handlebars.compile(source)
-	handlebars.registerPartial(key, templates[key])
-}
+;(function(){
+	var key, relPath, templatePath, source
 
+	for(key in templateManifest){
+		relPath = templateManifest[key]
+		templatePath = path.join(baseTemplatePath, relPath)
+		source = fs.readFileSync(templatePath, 'utf-8')
+		templates[key] = handlebars.compile(source)
+		handlebars.registerPartial(key, templates[key])
+	}
+})()
+
+// Enable {{#wrap with='templateKey'}} in templates.
+// The wrapper must embed {{{__wrapped_content}}} for this to work.
+handlebars.registerHelper('wrap', function(options){
+
+	// render the wrapped template first..
+	var wrappedContent = options.fn(this)
+	var wrapperTemplate = templates[options.hash['with']]
+
+	// ...then call the wrapper, using the wrapped template's
+	// output as the input to __wrapped_content
+	var data = options.data.root
+	data['__wrapped_content'] = wrappedContent
+	return wrapperTemplate(data)
+})
+
+// clean the 'dist' directory
 rmrf.sync(baseDistPath)
 mkdirp.sync(baseDistPath)
 
-// generate dist/index.html
-var indexSource = templates['index'](),
-	indexPath = path.join(baseDistPath, 'index.html')
-fs.writeFileSync(indexPath, indexSource, 'utf-8')
-
-// generate dist/faq.html
-var faqSource = templates['faq']({ "faqs": faqData }),
-	faqPath = path.join(baseDistPath, 'faq.html')
-fs.writeFileSync(faqPath, faqSource, 'utf-8')
-
-function copyFile(basePath, newPath, file){
-	var oldPath = path.join(basePath, file),
-		newPath = path.join(newPath, file)
+// runs a template function to generate an output file
+function generateTemplateOutput(templateName, outputRelPath, templateData){
+	templateData = templateData || {}
+	var output = templates[templateName](templateData),
+		outputPath = path.join(baseDistPath, outputRelPath)
+	fs.writeFileSync(outputPath, output, 'utf-8')
 }
 
-// copy static dependencies into dist
-ncp('./static-deps', path.join(baseDistPath, '/deps'))
+// generate dist/index.html
+generateTemplateOutput('index', 'index.html', {
+	navLinks: require('./data/index-navigation'),
+	includes: [
+		{css: "deps/index.css"},
+		{css: "deps/carousel.css"},
+		{css: "deps/features.css"},
+		{css: "deps/why.css"}
+	]
+})
+
+// generate dist/faq.html
+generateTemplateOutput('faq', 'faq.html', {
+	faqs: faqData,
+	includes: [
+		{js: 'deps/faq.js'}
+	]
+})
+
+// generate dist/deps/* by copying the static-deps folder (async!)
+ncp('./static-deps', path.join(baseDistPath, '/deps'), function(err, result){
+	// blank callback function for now...
+})

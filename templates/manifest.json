@@ -6,5 +6,8 @@
 	"footer": "footer.template.html",
 	"header": "header.template.html",
 	"faq": "faq.template.html",
-	"faq-block": "faq-block.template.html"
+	"faq-block": "faq-block.template.html",
+	"head-includes": "head-includes.template.html",
+	"page-wrapper": "page-wrapper.template.html",
+	"header-navigation": "header-navigation.template.html"
 }

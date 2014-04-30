@@ -1,35 +1,17 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Code Pulse</title>
-		<script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
-		<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
-		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-		<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
-		<link rel="stylesheet" href="deps/index.css"/>
-		<link rel="stylesheet" href="deps/carousel.css"/>
-		<link rel="stylesheet" href="deps/features.css"/>
-		<link rel="stylesheet" href="deps/why.css"/>
-		<link rel="stylesheet" href="deps/footer.css"/>
-		<link rel="stylesheet" href="deps/header.css"/>
-	</head>
-	<body>
-		{{> header}}
+{{#wrap with='page-wrapper'}}
 
-		<article class="section carousel-section">
-			{{> screenshot-carousel}}
-		</article>
+	<article class="section carousel-section">
+		{{> screenshot-carousel}}
+	</article>
 
-		<article class="section" id="features">
-			<h1>Features</h1>
-			{{> features}}
-		</article>
+	<article class="section" id="features">
+		<h1>Features</h1>
+		{{> features}}
+	</article>
 
-		<article class="section" id="why">
-			<h1>Why Code Pulse?</h1>
-			{{> why}}
-		</article>
+	<article class="section" id="why">
+		<h1>Why Code Pulse?</h1>
+		{{> why}}
+	</article>
 
-		{{> footer}}
-	</body>
-</html>
+{{/wrap}}

@@ -1,0 +1,25 @@
+{{#if navLinks ~}}
+
+<div class="navigation-placeholder">
+	<!-- adds vertical space when the .navigation div is affixed -->
+</div>
+
+<div class="navigation">
+	<div class="section">
+		<ul class="links-list">
+			{{#each navLinks}}
+				<li>
+					<a href="{{href}}">{{{html}}}</a>
+				</li>
+			{{/each}}
+			<li class="pull-right">
+				<a class="when-affixed" href="#top">
+					back to top
+					<i class="fa fa-arrow-up"></i>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+{{else}}{{/if}}

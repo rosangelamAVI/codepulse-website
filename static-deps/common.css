@@ -1,0 +1,57 @@
+html, body {
+	height: 100%;
+	min-width: 940px;
+}
+
+/* combines with 100% height body+html so the footer can 
+ * always be at the bottom of the screen 
+ */
+.full-height-wrapper {
+	min-height: 100%;
+
+	/* hard-code this to the exact height of the footer */
+	padding-bottom: 42px;
+}
+
+footer {
+	/* hard-code this to the exact height of the footer, times -1 */
+	margin-top: -42px;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	background-color: #323232;
+	color: white;
+	border-top: 2px solid lightgray;
+}
+
+
+/* articles are top-level elements that define
+ * vertical spacing around themselves
+ */
+article {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+article h1 {
+	border-bottom: 1px solid lightgray;
+}
+
+/* sections are horizontal layout elements
+ * that can be used inside other elements
+ */
+.section {
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 940px;
+	margin: auto;
+	position: relative;
+
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.section.narrow {
+
+}
