@@ -1,29 +1,22 @@
-{{#if navLinks ~}}
-
 <div class="navigation-placeholder">
 	<!-- adds vertical space when the .navigation div is affixed -->
 </div>
 
 <div class="navigation">
 	<div class="section">
-		<ul class="links-list">
+		<ul class="links-list fancy">
 			<li>
-				<a href="index.html"><i class="fa fa-home"></i> Home</a>
+				<a class="home-link" href="index.html"><i class="fa fa-home"></i> Home</a>
 			</li>
 			<li>
-				<a target="_blank" href="https://github.com/secdec/codepulse/releases">
+				<a class="download-link" target="_blank" href="https://github.com/secdec/codepulse/releases">
 					<i class="fa fa-download"></i> Download
 				</a>
 			</li>
 			<li>
-				<a href="faq.html"><i class="fa fa-question-circle"></i> FAQ</a>
+				<a class="faq-link" href="faq.html"><i class="fa fa-question-circle"></i> FAQ</a>
 			</li>
-			<li class="pull-right">
-				<a class="when-affixed" href="#top">
-					back to top
-					<i class="fa fa-arrow-up"></i>
-				</a>
-			</li>
+
 		</ul>
 		<ul class="links-list">
 			{{#each navLinks}}
@@ -31,8 +24,12 @@
 					<a href="{{href}}">{{{html}}}</a>
 				</li>
 			{{/each}}
+			<li class="pull-right">
+				<a class="when-affixed" href="#top">
+					back to top
+					<i class="fa fa-arrow-up"></i>
+				</a>
+			</li>
 		</ul>
 	</div>
 </div>
-
-{{else}}{{/if}}

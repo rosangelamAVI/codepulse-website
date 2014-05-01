@@ -48,22 +48,37 @@ header a:hover {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	display: inline;
+	font-size: 0;
 }
 
 .links-list > li {
 	display: inline-block;
+	font-size: 14px;
 }
 
 .links-list > li a {
 	font-size: 1.2em;
+	padding: 4px 6px;
+	display: inline-block;
 }
 
-.links-list > li:not(:first-child) a {
-	margin-left: 15px;
+.links-list.fancy {
+	margin-right: 10px;
+}
+
+.links-list.fancy > li a {
+	color: #C7EBFF;
+	/*background-color: #055;
+	border-right: 2px solid #044;
+	color: white;*/
+}
+.links-list.fancy > li a:hover {
+	/*background-color: #066;*/
+	color: #00A3FF;
 }
 
 .navigation {
-	padding: 5px;
 	background-color: #444;
 	border-bottom: 2px solid lightgray;
 }
@@ -72,7 +87,7 @@ header a:hover {
 	/* stands in place of the navigation when the header is affixed,
 	 * so the layout doesn't shift due to the missing 36 pixels
 	 */
-	height: 36px;
+	height: 32px;
 	display: none;
 }
 
