@@ -10,21 +10,20 @@ html, body {
 	min-height: 100%;
 
 	/* hard-code this to the exact height of the footer */
-	padding-bottom: 42px;
+	padding-bottom: 280px;
 }
 
 footer {
 	/* hard-code this to the exact height of the footer, times -1 */
-	margin-top: -42px;
+	margin-top: -280px;
 
 	padding-top: 10px;
 	padding-bottom: 10px;
 
-	background-color: #323232;
-	color: white;
-	border-top: 2px solid lightgray;
+	/* this def is for layout-specific footer stuff.
+	 * footer styles go in footer.css
+	 */
 }
-
 
 /* articles are top-level elements that define
  * vertical spacing around themselves

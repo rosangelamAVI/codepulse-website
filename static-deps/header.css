@@ -11,7 +11,7 @@ header {
 	margin-bottom: 5px;
 }
 
-.branding-content {
+header .branding-content {
 	display: inline-block;
 	float: right;
 }
