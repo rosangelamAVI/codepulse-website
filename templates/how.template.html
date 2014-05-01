@@ -11,26 +11,26 @@
 		<div id="how-steps">
 			<div id="how-download" class="step">
 				<img class="pull-right" src="deps/img/download-zip.png" />
-				<div class="caption"><a href="#">Download Code Pulse</a>, extract the zip archive, and run the application.</div>
+				<div class="caption">{{#link 'download'}}Download Code Pulse{{/link}}, extract the zip archive, and run the application.</div>
 				<div class="clearfix"></div>
-				<a class="step-link" href="https://github.com/secdec/codepulse/wiki/Installation">Detailed Installation Instructions</a>
+				<a class="step-link" target="_blank" href="{{url 'wiki_installation'}}">Detailed Installation Instructions</a>
 			</div>
 			<div id="how-point" class="step">
 				<img class="pull-right" src="deps/img/code-pulse-new-project.png" />
 				<div class="caption">Create a new project and pass it your war/jar/zip so that it can index your application inventory.</div>
 				<div class="clearfix"></div>
-				<a class="step-link" href="https://github.com/secdec/codepulse/wiki/Creating-Projects">Creating Code Pulse Projects Instructions</a>
+				<a class="step-link" target="_blank" href="{{url 'wiki_create_project'}}">Creating Code Pulse Projects Instructions</a>
 			</div>
 			<div id="how-agent" class="step">
 				<div class="caption">Pass an extra flag to your application's JVM startup so that we can monitor it, and start it up.</div>
 				<div class="agent-string">-javaagent:CodePulse/agent.jar=localhost:8765</div>
-				<a class="step-link" href="https://github.com/secdec/codepulse/wiki/Agent-Configuration">Agent Configuration Instructions</a>
+				<a class="step-link" target="_blank" href="{{url 'wiki_agent_config'}}">Agent Configuration Instructions</a>
 			</div>
 			<div id="how-monitor" class="step">
 				<img class="pull-right" src="deps/img/code-pulse-monitor.png" />
 				<div class="caption">Code Pulse receives the coverage data while your application runs and shows it to you in realtime!</div>
 				<div class="clearfix"></div>
-				<a class="step-link" href="https://github.com/secdec/codepulse/wiki/Tracing-Projects">Tracing Instructions</a>
+				<a class="step-link" target="_blank" href="{{url 'wiki_tracing'}}">Tracing Instructions</a>
 			</div>
 		</div>
 	</div>

@@ -1,0 +1,19 @@
+{
+	"download":  "https://github.com/secdec/codepulse/releases",
+	"owasp_project": "https://www.owasp.org/index.php/OWASP_Code_Pulse_Project",
+	"secdec": "http://securedecisions.com/",
+	"avi": "http://www.avi.com/",
+	"codedx": "http://codedx.com/",
+	"license": "http://www.apache.org/licenses/LICENSE-2.0.html",
+	"github": "https://github.com/secdec/codepulse",
+	"github_issues": "https://github.com/secdec/codepulse/issues",
+	"github_milestones": "https://github.com/secdec/codepulse/issues/milestones",
+	"github_new_issue": "https://github.com/secdec/codepulse/issues/new",
+	"wiki": "https://github.com/secdec/codepulse/wiki",
+	"wiki_quick_start": "https://github.com/secdec/codepulse/wiki#quick-start",
+	"wiki_agent_config": "https://github.com/secdec/codepulse/wiki/Agent-Configuration",
+	"wiki_create_project": "https://github.com/secdec/codepulse/wiki/Creating-Projects",
+	"wiki_installation": "https://github.com/secdec/codepulse/wiki/Installation",
+	"wiki_tracing": "https://github.com/secdec/codepulse/wiki/Tracing-Projects",
+	"tweet_at_secdec": "https://twitter.com/intent/tweet?screen_name=secdec"
+}

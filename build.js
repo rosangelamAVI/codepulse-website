@@ -8,7 +8,8 @@ var handlebars = require('handlebars'),
 	baseTemplatePath = './templates',
 	baseDistPath = './dist',
 	templates = {},
-	faqData = require('./data/faqs')
+	faqData = require('./data/faqs'),
+	urlData = require('./data/urls')
 
 // generate handlebars templates from the templateManifest,
 // and register each one as partials
@@ -21,6 +22,20 @@ var handlebars = require('handlebars'),
 		source = fs.readFileSync(templatePath, 'utf-8')
 		templates[key] = handlebars.compile(source)
 		handlebars.registerPartial(key, templates[key])
+	}
+})()
+
+// transform the faq.json answers into handlebar templates
+;(function(){
+	for(var key in faqData){
+		var qa = faqData[key], answer = qa.answer
+		if(typeof answer == 'string'){
+			qa.answer = handlebars.compile(answer)
+		} else if(Array.isArray(answer)){
+			qa.answer = answer.map(function(a){
+				return handlebars.compile(a)
+			})
+		}
 	}
 })()
 
@@ -37,6 +52,22 @@ handlebars.registerHelper('wrap', function(options){
 	var data = options.data.root
 	data['__wrapped_content'] = wrappedContent
 	return wrapperTemplate(data)
+})
+
+// creates <a target="_blank" href="...">{{...}}</a>
+// where the href is based on a mapping from urls.json
+handlebars.registerHelper('link', function(context, options){
+	var url = urlData[context] || '#todo'
+
+	var s = "<a href=\"" + url + "\" target=\"_blank\">"
+	s += options.fn(this)
+	s += "</a>"
+	return s
+})
+
+// similar to the link helper, but just returns the url
+handlebars.registerHelper('url', function(context, options){
+	return urlData[context] || '#todo'
 })
 
 // clean the 'dist' directory

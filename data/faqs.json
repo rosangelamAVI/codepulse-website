@@ -2,7 +2,7 @@
 	{
 		"id": "how-do-i",
 		"question": "How do I run/use Code Pulse?",
-		"answer": "Code Pulse is a desktop application that runs on Windows, Mac OS X, and Linux. You can &lt;download it&gt; and follow the &lt;these instructions&gt; on how to get started with using it."
+		"answer": "Code Pulse is a desktop application that runs on Windows, Mac OS X, and Linux. You can {{#link 'download'}}download it{{/link}} and follow the {{#link 'wiki_quick_start'}}these instructions{{/link}} on how to get started with using it."
 	}, {
 		"id": "what-languages",
 		"question": "What languages/platforms can Code Pulse monitor?",
@@ -13,7 +13,7 @@
 	}, {
 		"id": "do-i-need-modifications",
 		"question": "Do I need to modify my application for Code Pulse to monitor it?",
-		"answer": "No, you don't need to modify your application. Code Pulse uses a JVM agent to instrument your application at runtime. That means that we don't need you to modify your source or byte code. We automatically inject callbacks in your methods when your classes are being loaded. That's how we know when a method is covered or not. All you need to do is to startup your JVM with a special flag to load our agent within its context. You can find instruction on how to do that &lt;here&gt;."
+		"answer": "No, you don't need to modify your application. Code Pulse uses a JVM agent to instrument your application at runtime. That means that we don't need you to modify your source or byte code. We automatically inject callbacks in your methods when your classes are being loaded. That's how we know when a method is covered or not. All you need to do is to startup your JVM with a special flag to load our agent within its context. You can find instruction on how to do that {{#link 'wiki_agent_config'}}here{{/link}}."
 	}, {
 		"id": "how-accurate",
 		"question": "How accurate is the Code Pulse coverage information?",
@@ -32,6 +32,6 @@
 	}, {
 		"id": "how-can-i-help",
 		"question": "How can I help?",
-		"answer": "Thanks for asking. There's plenty to do. You can help us with our &lt;wiki documentation&gt;, report bugs to our &lt;issue tracker&gt;, and help us spread the word about Code Pulse! If you're feeling adventurous you can fork our code and fix any of the &lt;current issues&gt;, take a first stab at some of our &lt;roadmap tasks&gt;, or extend the application as you see fit and submit a pull request."
+		"answer": "Thanks for asking. There's plenty to do. You can help us with our {{#link 'wiki'}}wiki documentation{{/link}}, {{#link 'github_new_issue'}}report bugs{{/link}}, and help us spread the word about Code Pulse! If you're feeling adventurous you can fork our code and fix any of the {{#link 'github_issues'}}current issues{{/link}}, take a first stab at some of our {{#link 'github_milestones'}}roadmap tasks{{/link}}, or extend the application as you see fit and submit a pull request."
 	}
 ]
