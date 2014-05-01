@@ -1,8 +1,7 @@
 // http://css-tricks.com/snippets/jquery/smooth-scrolling/
 
 $(function() {
-	$('header a[href*=#]:not([href=#],[data-toggle])').click(function() {
-		console.log(this)
+	$('.navigation a[href^=#]').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 			var target = $(this.hash);
 			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');

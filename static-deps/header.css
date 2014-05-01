@@ -4,7 +4,7 @@ header {
 	padding-top: 10px;
 }
 
-.affix-top .when-affixed { display: none; }
+[data-spy=affix]:not(.affix) .when-affixed { display: none; }
 
 .links-content {
 	float: left;
