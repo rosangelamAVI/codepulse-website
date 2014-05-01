@@ -1,5 +1,5 @@
-.carousel-wrapper .img {
-	height: 600px;
+.carousel-wrapper {
+	height: 584px;
 	/* adjust with #screenshot-carousel height to account for aspect ratio */
 }
 
