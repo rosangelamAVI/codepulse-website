@@ -11,8 +11,8 @@
 		// select the first step automatically
 		setStep($('#how-steps .step:first').attr('id'))
 
-		// on mouse enter, change step
-		$('#how-list li[data-step]').mouseenter(function() {
+		// on mouse hover, change step
+		$('#how-list li[data-step]').on('hoverenter', function() {
 			var step = $(this).data('step')
 			setStep(step)
 		})
