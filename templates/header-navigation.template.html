@@ -7,17 +7,30 @@
 <div class="navigation">
 	<div class="section">
 		<ul class="links-list">
-			{{#each navLinks}}
-				<li>
-					<a href="{{href}}">{{{html}}}</a>
-				</li>
-			{{/each}}
+			<li>
+				<a href="index.html"><i class="fa fa-home"></i> Home</a>
+			</li>
+			<li>
+				<a target="_blank" href="https://github.com/secdec/codepulse/releases">
+					<i class="fa fa-download"></i> Download
+				</a>
+			</li>
+			<li>
+				<a href="faq.html"><i class="fa fa-question-circle"></i> FAQ</a>
+			</li>
 			<li class="pull-right">
 				<a class="when-affixed" href="#top">
 					back to top
 					<i class="fa fa-arrow-up"></i>
 				</a>
 			</li>
+		</ul>
+		<ul class="links-list">
+			{{#each navLinks}}
+				<li>
+					<a href="{{href}}">{{{html}}}</a>
+				</li>
+			{{/each}}
 		</ul>
 	</div>
 </div>

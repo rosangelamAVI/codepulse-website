@@ -67,6 +67,7 @@ generateTemplateOutput('index', 'index.html', {
 // generate dist/faq.html
 generateTemplateOutput('faq', 'faq.html', {
 	faqs: faqData,
+	navLinks: [{}],
 	includes: [
 		{js: 'deps/faq.js'}
 	]

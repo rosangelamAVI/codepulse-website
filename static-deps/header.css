@@ -11,19 +11,38 @@ header {
 	margin-bottom: 5px;
 }
 
-header .branding-content {
-	display: inline-block;
-	float: right;
+header .branding {
+	line-height: 40px;
+	font-size: 40px;
 }
 
-a.project-name {
-	font-size: 3em;
+header .branding a.project-name {
 	letter-spacing: -3px;
 
-	/* undo link styles */
+	color: white;
+	/*text-decoration: none;*/
+}
+
+header .branding .subtext {
+	font-size: 12px;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+header .branding img {
+	height: 36px;
+	width: auto;
+	vertical-align: top;
+}
+
+header a {
+	color: lightgray;
+}
+header a:hover {
 	color: white;
 	text-decoration: none;
 }
+
 
 .links-list {
 	margin: 0;
@@ -36,17 +55,11 @@ a.project-name {
 }
 
 .links-list > li a {
-	color: lightgray;
 	font-size: 1.2em;
-	text-decoration: none;
 }
 
 .links-list > li:not(:first-child) a {
 	margin-left: 15px;
-}
-
-.links-list > li a:hover {
-	color: white;
 }
 
 .navigation {
