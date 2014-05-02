@@ -15,5 +15,6 @@
 	"wiki_create_project": "https://github.com/secdec/codepulse/wiki/Creating-Projects",
 	"wiki_installation": "https://github.com/secdec/codepulse/wiki/Installation",
 	"wiki_tracing": "https://github.com/secdec/codepulse/wiki/Tracing-Projects",
+	"wiki_application_inventory": "https://github.com/secdec/codepulse/wiki/Exploring-Projects#the-application-inventory",
 	"tweet_at_secdec": "https://twitter.com/intent/tweet?screen_name=secdec"
 }
