@@ -44,6 +44,8 @@ header a:hover {
 	text-decoration: none;
 }
 
+header a:focus { color: white; text-decoration: none; }
+
 
 .links-list {
 	margin: 0;

@@ -14,6 +14,8 @@ footer a:hover {
 	text-decoration: none;
 }
 
+footer a:focus { color: #C7EBFF; text-decoration: none; }
+
 footer .branding-content {
 	margin-top: 12px;
 	/* to inline the image with the other header texts */
