@@ -12,27 +12,28 @@ header {
 }
 
 header .branding {
-	line-height: 40px;
-	font-size: 40px;
+	line-height: 34px;
+	font-size: 34px;
 }
 
 header .branding a.project-name {
-	letter-spacing: -3px;
-
+	/*letter-spacing: -2px;*/
+	font-weight: bold;
+	font-family: Tahoma;
 	color: white;
-	/*text-decoration: none;*/
 }
 
 header .branding .subtext {
 	font-size: 12px;
 	vertical-align: middle;
 	margin-right: 5px;
+	color: #ccc;
 }
 
 header .branding img {
-	height: 36px;
+	height: 30px;
 	width: auto;
-	vertical-align: top;
+	vertical-align: middle;
 }
 
 header a {
