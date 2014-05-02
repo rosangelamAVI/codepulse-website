@@ -21,6 +21,8 @@
 
 	opacity: 0.25;
 	transition: opacity 0.3s;
+
+	cursor: pointer;
 }
 
 #how ol li:before {
