@@ -1,6 +1,7 @@
 {
 	"index": "index.template.html",
 	"screenshot-carousel": "screenshot-carousel.template.html",
+	"overview": "overview.template.html",
 	"why": "why.template.html",
 	"features": "features.template.html",
 	"how": "how.template.html",

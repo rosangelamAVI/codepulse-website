@@ -1,0 +1,8 @@
+#overview .btn { margin-top: 15px; }
+
+#overview .btn .version {
+	display: block;
+	color: #A8D7EB;
+	margin-top: 4px;
+	font-size: 75%;
+}

@@ -87,6 +87,7 @@ generateTemplateOutput('index', 'index.html', {
 	navLinks: require('./data/index-navigation'),
 	includes: [
 		{css: "deps/carousel.css"},
+		{css: "deps/overview.css"},
 		{css: "deps/features.css"},
 		{css: "deps/why.css"},
 		{css: 'deps/how.css'},
