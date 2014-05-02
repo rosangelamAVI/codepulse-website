@@ -10,12 +10,12 @@ html, body {
 	min-height: 100%;
 
 	/* hard-code this to the exact height of the footer */
-	padding-bottom: 280px;
+	padding-bottom: 271px;
 }
 
 footer {
 	/* hard-code this to the exact height of the footer, times -1 */
-	margin-top: -280px;
+	margin-top: -271px;
 
 	padding-top: 10px;
 	padding-bottom: 10px;
