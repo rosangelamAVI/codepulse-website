@@ -57,6 +57,7 @@ header a:focus { color: white; text-decoration: none; }
 .links-list > li {
 	display: inline-block;
 	font-size: 14px;
+	margin-right: 5px;
 }
 
 .links-list > li a {
