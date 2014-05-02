@@ -1,0 +1,104 @@
+#how ol {
+	display: block;
+	list-style: none;
+	counter-reset: li;
+
+	font-size: 24px;
+	line-height: 40px;
+
+	padding-left: 25px;
+	margin-top: 8px;
+}
+
+#how ol li:first-child {
+	margin-top: 0;
+}
+
+#how ol li {
+	position: relative;
+	left: 50px;
+	margin-top: 15px;
+
+	opacity: 0.25;
+	transition: opacity 0.3s;
+
+	cursor: pointer;
+}
+
+#how ol li:before {
+	counter-increment: li;
+	content: counter(li);
+
+	position: absolute;
+	left: -50px;
+
+	font-size: 87%;
+	text-align: center;
+	color: white;
+
+	width: 40px; height: 40px;
+	background: #444;
+
+	border-radius: 999px;
+}
+
+#how ol li.active {
+	opacity: 1;
+}
+
+#how-steps {
+	position: relative;
+}
+
+#how-steps .step {
+	position: absolute;
+
+	visibility: hidden;
+	opacity: 0;
+	
+	-moz-transition: opacity 0.3s, visibility 0.3s;
+	-webkit-transition: opacity 0.3s, visibility 0.3s;
+	transition: opacity 0.3s, visibility 0.3s;
+}
+
+#how-steps .step.active {
+	visibility: visible;
+	opacity: 1;
+
+	-moz-transition: opacity 0.3s, visibility 0.3s;
+	-webkit-transition: opacity 0.3s, visibility 0.3s;
+	transition: opacity 0.3s, visibility 0.3s;
+}
+
+#how-steps #how-point img, #how-steps #how-monitor img {
+	width: 60%;
+	height: auto;
+}
+
+#how-download .caption {
+	margin-top: 45px;
+}
+
+#how-point .caption {
+	margin-top: 45px;
+}
+
+#how-monitor .caption {
+	margin-top: 34px;
+}
+
+#how-agent .agent-string {
+	margin-top: 15px;
+	padding: 6px;
+	border-radius: 10px;
+
+	color: steelblue;
+	background: #eee;
+	text-align: center;
+}
+
+#how-steps .step .step-link {
+	display: block;
+	margin-top: 15px;
+	text-align: right;
+}

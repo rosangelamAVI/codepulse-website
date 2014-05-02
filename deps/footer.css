@@ -1,0 +1,31 @@
+footer {
+	background-color: #323232;
+	color: white;
+	border-top: 2px solid lightgray;
+}
+
+footer a {
+	color: #C7EBFF;
+	text-decoration: none;
+}
+
+footer a:hover {
+	color: #E4C1A1;
+	text-decoration: none;
+}
+
+footer a:focus { color: #C7EBFF; text-decoration: none; }
+
+footer .branding-content {
+	margin-top: 12px;
+	/* to inline the image with the other header texts */
+}
+
+footer .branding-content img {
+	width: 153px;
+}
+
+footer .acknowledgement {
+	margin-top: 20px;
+	text-align: justify;
+}

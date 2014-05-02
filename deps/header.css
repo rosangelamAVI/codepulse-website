@@ -1,0 +1,115 @@
+header {
+	background-color: #323232;
+	color: white;
+}
+
+[data-spy=affix]:not(.affix) .when-affixed { display: none; }
+
+.links-content {
+	float: left;
+	margin-bottom: 5px;
+}
+
+header .branding {
+	line-height:50px;
+	font-size: 34px;
+}
+
+header .branding a.project-name {
+	/*letter-spacing: -2px;*/
+	font-weight: bold;
+	font-family: Tahoma;
+	color: white;
+}
+
+header .branding .subtext {
+	font-size: 12px;
+	vertical-align: middle;
+	margin-right: 5px;
+	color: #ccc;
+}
+
+header .branding img {
+	height: 30px;
+	width: auto;
+	vertical-align: middle;
+}
+
+header a {
+	color: lightgray;
+}
+header a:hover {
+	color: white;
+	text-decoration: none;
+}
+
+header a:focus { color: white; text-decoration: none; }
+
+
+.links-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: inline;
+	font-size: 0;
+}
+
+.links-list > li {
+	display: inline-block;
+	font-size: 14px;
+	margin-right: 5px;
+}
+
+.links-list > li a {
+	font-size: 1.2em;
+	padding: 4px 6px;
+	display: inline-block;
+}
+
+.links-list.fancy {
+	margin-right: 10px;
+}
+
+.links-list.fancy > li a {
+	color: #C7EBFF;
+	/*background-color: #055;
+	border-right: 2px solid #044;
+	color: white;*/
+}
+.links-list.fancy > li a:hover {
+	/*background-color: #066;*/
+	color: #E4C1A1;
+}
+
+.navigation {
+	background-color: #444;
+	/*border-bottom: 2px solid lightgray;*/
+}
+
+.navigation-placeholder {
+	/* stands in place of the navigation when the header is affixed,
+	 * so the layout doesn't shift due to the missing 36 pixels
+	 */
+	height: 32px;
+	display: none;
+}
+
+header.affix {
+	/* bootstrap's default is to put position:fixed on an .affix element.
+	 * We're putting it on the container, but only want certain content
+	 * to be fixed.
+	 */
+	position: static;
+}
+
+header.affix .navigation {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+	opacity: 0.95;
+}
+
+header.affix .navigation-placeholder {
+	display: block;
+}

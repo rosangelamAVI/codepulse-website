@@ -1,54 +1,465 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Code Pulse by secdec</title>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title></title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Code Pulse</h1>
-        <p>Real-time code coverage for penetration testing activities</p>
+		<!-- default required JS anc CSS files -->
+		<script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+		<link rel="stylesheet" 
+			href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet"
+			href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"/>
+		<script src="deps/jquery-ui-easings.js"></script>
+		<link rel="stylesheet" href="deps/common.css"/>
+		<link rel="stylesheet" href="deps/header.css"/>
+		<link rel="stylesheet" href="deps/footer.css"/>
+		<script src="deps/smooth-scroll.js"></script>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        <p class="view"><a href="https://github.com/secdec/codepulse-website">View the Project on GitHub <small>secdec/codepulse-website</small></a></p>
+		  ga('create', 'UA-50447789-1', 'code-pulse.com');
+		  ga('send', 'pageview');
+
+		</script>
+
+		<!-- page-specific JS and CSS files -->
+		
+	<link rel="stylesheet" href="deps/carousel.css"/>
+
+	<link rel="stylesheet" href="deps/overview.css"/>
+
+	<link rel="stylesheet" href="deps/features.css"/>
+
+	<link rel="stylesheet" href="deps/why.css"/>
+
+	<link rel="stylesheet" href="deps/how.css"/>
+<script src="deps/jquerypp.hover.js"></script>
+	
+<script src="deps/how.js"></script>
+	
+
+	</head>
+	<body id="top">
+		<div class="full-height-wrapper">
+			<header data-spy="affix" data-offset-top="54">
+
+	<!-- branding and external links -->
+	<div class="section">
+		<div class="branding">
+			<a class="project-name" href="index.html">Code Pulse</a>
+			<span class="subtext">an</span>
+
+			<a href="https://www.owasp.org/index.php/OWASP_Code_Pulse_Project" target="_blank">
+				<img src="deps/img/owasp-logo.png"/>
+			</a>
+
+			<span class="subtext">project by</span>
+
+			<a href="http://securedecisions.com/" target="_blank">
+				<img src="deps/img/secdec-logo.png"/>
+			</a>
+			
+		</div>
+	</div>
+
+	<!-- "fork me on github!"" white banner -->
+	<a target="_blank" href="https://github.com/secdec/codepulse"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 1;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
+
+	<div class="navigation-placeholder">
+	<!-- adds vertical space when the .navigation div is affixed -->
+</div>
+
+<div class="navigation">
+	<div class="section">
+		<ul class="links-list fancy">
+			<li>
+				<a href="index.html"><i class="fa fa-home"></i> Home</a>
+			</li>
+			<li><a href="https://github.com/secdec/codepulse/releases/tag/1.0.0" target="_blank"><i class="fa fa-download"></i> Download</a></li>
+			<li>
+				<a href="faq.html"><i class="fa fa-question-circle"></i> FAQ</a>
+			</li>
+
+		</ul>
+		<ul class="links-list">
+			
+				<li>
+					<a href="#how">How it works</a>
+				</li>
+			
+				<li>
+					<a href="#why">Why Code Pulse?</a>
+				</li>
+			
+				<li>
+					<a href="#features">Features</a>
+				</li>
+			
+				<li>
+					<a href="#about">About us</a>
+				</li>
+			
+			<li class="pull-right">
+				<a class="when-affixed" href="#top">
+					back to top
+					<i class="fa fa-arrow-up"></i>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+</header>
 
 
-        <ul>
-          <li><a href="https://github.com/secdec/codepulse-website/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/secdec/codepulse-website/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/secdec/codepulse-website">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>
-<a name="welcome-to-code-pulse" class="anchor" href="#welcome-to-code-pulse"><span class="octicon octicon-link"></span></a>Welcome to Code Pulse</h3>
+			<!-- page-specific content -->
+			
 
-<p>Work in progress ...</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/secdec">secdec</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-50447789-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
+	<article id="carousel">
+		<div class="section">
+			<!-- wrap the carousel to set an explicit height -->
+<div class="carousel-wrapper">
 
-  </body>
+	<!-- Using the twitter bootstrap carousel widget to show a set of screenshots -->
+	<div id="screenshot-carousel" class="carousel slide" data-ride="carousel">
+
+		<!-- Incidators -->
+		<ol class="carousel-indicators">
+			<li data-target="#screenshot-carousel" data-slide-to="0" class="active"></li>
+			<li data-target="#screenshot-carousel" data-slide-to="1"></li>
+			<li data-target="#screenshot-carousel" data-slide-to="2"></li>
+		</ol>
+
+		<!-- The actual slides -->
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="deps/img/code-pulse-in-action.png" alt="Code Pulse"/>
+				<div class="carousel-caption">
+					<h4>Real-time coverage highlighting</h4>
+				</div>
+			</div>
+
+
+			<div class="item">
+				<img src="deps/img/code-pulse-coverage.png" alt="Code Pulse coverage"/>
+				<div class="carousel-caption">
+					<h4>See detailed coverage breakdowns</h4>
+				</div>
+			</div>
+
+			<div class="item">
+				<img src="deps/img/code-pulse-coverage-overlaps.png" alt="Code Pulse coverage"/>
+				<div class="carousel-caption">
+					<h4>Identify coverage gaps and overlaps</h4>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Controls -->
+		<a class="left carousel-control" href="#screenshot-carousel" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</a>
+		<a class="right carousel-control" href="#screenshot-carousel" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+
+	</div>
+
+</div>
+		</div>
+	</article>
+
+	<article id="overview">
+		<div class="section">
+			<div class="text-center">
+	<h3>Code Pulse is a real-time code coverage tool for penetration testing activities</h3>
+	<a href="https://github.com/secdec/codepulse/releases/tag/1.0.0" class="btn btn-lg btn-primary">Download Code Pulse<span class="version">Version 1.0</span></a>
+</div>
+		</div>
+	</article>
+
+	<article id="how">
+		<div class="section">
+			<h1>How it works</h1>
+			<div class="row">
+	<div class="col-sm-7">
+		<ol id="how-list">
+			<li data-step="how-download">Download &amp; run Code Pulse</li>
+			<li data-step="how-point">Point Code Pulse at your app bundle</li>
+			<li data-step="how-agent">Configure your app for monitoring</li>
+			<li data-step="how-monitor">Monitor code coverage in real-time!</li>
+		</ol>
+	</div>
+	<div class="col-sm-5">
+		<div id="how-steps">
+			<div id="how-download" class="step">
+				<a href="https://github.com/secdec/codepulse/releases/tag/1.0.0" target="_blank"><img class="pull-right" src="deps/img/download-zip.png" /></a>
+				<div class="caption"><a href="https://github.com/secdec/codepulse/releases/tag/1.0.0" target="_blank">Download Code Pulse</a>, extract the zip archive, and run the application.</div>
+				<div class="clearfix"></div>
+				<a class="step-link" target="_blank" href="https://github.com/secdec/codepulse/wiki/Installation">Detailed Installation Instructions</a>
+			</div>
+			<div id="how-point" class="step">
+				<img class="pull-right" src="deps/img/code-pulse-new-project.png" />
+				<div class="caption">Create a new project and pass it your war/jar/zip so that it can index your <a href="https://github.com/secdec/codepulse/wiki/Exploring-Projects#the-application-inventory" target="_blank">application inventory</a>.</div>
+				<div class="clearfix"></div>
+				<a class="step-link" target="_blank" href="https://github.com/secdec/codepulse/wiki/Creating-Projects">Creating Code Pulse Projects Instructions</a>
+			</div>
+			<div id="how-agent" class="step">
+				<div class="caption">Pass an extra flag to your application's JVM startup so that we can monitor it.</div>
+				<div class="agent-string">-javaagent:CodePulse/agent.jar=localhost:8765</div>
+				<a class="step-link" target="_blank" href="https://github.com/secdec/codepulse/wiki/Agent-Configuration">Agent Configuration Instructions</a>
+			</div>
+			<div id="how-monitor" class="step">
+				<img class="pull-right" src="deps/img/code-pulse-monitor.png" />
+				<div class="caption">Code Pulse receives the coverage data while your application runs and shows it to you in realtime!</div>
+				<div class="clearfix"></div>
+				<a class="step-link" target="_blank" href="https://github.com/secdec/codepulse/wiki/Tracing-Projects">Tracing Instructions</a>
+			</div>
+		</div>
+	</div>
+</div>
+		</div>
+	</article>
+
+	<article id="why">
+		<div class="section">
+			<div class="row">
+	<div class="col-why-side">
+		<div class="why-callout">
+			<div class="callout-header">
+				Compare coverage across testing tools
+			</div>
+			<div class="callout-content">
+				<p>
+					Are you using automated penetration testing tools? Monitor and
+					compare their coverage. Visually understand where there were
+					coverage overlaps and where there weren't any.
+				</p>
+			</div>
+		</div>
+		<div class="why-callout">
+			<div class="callout-header">
+				Communicate your testing activity
+			</div>
+			<div class="callout-content">
+				<p>
+					Export your coverage activity and share it with others so they
+					can easily understand which parts of the application were
+					covered in testing.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-why-middle">
+		<h1>Why Code Pulse?</h1>
+		
+		<p>
+		A continuous challenge facing penetration testers is ensuring adequate 
+		coverage of a target application. A purely black box perspective makes 
+		it almost impossible to accurately identify how much of the attack surface
+		was tested for penetration during assessment.
+		</p>
+
+		<p>
+		Code Pulse is a glass box tool that provides insight into the real-time
+		code coverage of penetration testing activities. Code Pulse automatically
+		detects coverage information while the tests are being conducted and
+		will even make it possible to understand the overlaps and boundaries of
+		the different tools coverage.
+		</p>
+
+		<p>
+		Code Pulse presents coverage information in a visual form to make it
+		easy to understand at-a-glance which parts of an application have been
+		covered and how much. The real-time coverage feedback makes it easy to
+		adjust testing activity based on the observed coverage. In addition, for
+		testing activities relying on multiple techniques (a variety of dynamic
+		analysis tools for instance) it's easy to split up the recorded
+		activity to understand which code was covered by each tool independently
+		or alternatively to view coverage overlaps between multiple tools.
+		</p>
+	</div>
+
+	<div class="col-why-side">
+		<div class="why-callout">
+			<div class="callout-header">
+				Identify coverage gaps
+			</div>
+			<div class="callout-content">
+				<p>
+					Even if you visited a page, you may not have triggered certain
+					critical code paths. See exactly what methods were called during
+					your testing.
+				</p>
+			</div>
+		</div>
+
+		<div class="why-callout">
+			<div class="callout-header">
+				Learn how to fine-tune your testing tools
+			</div>
+			<div class="callout-content">
+				<p>
+					There are a lot of unknowns when using active scanners. Use 
+					Code Pulse as you let your scanners loose on the application
+					and understand where the scan shortcomings were as you fine-tune
+					the testing tool configuration.
+				</p>
+			</div>
+		</div>
+	</div>
+
+</div>
+		</div>
+	</article>
+
+	<article id="features">
+		<div class="section">
+			<h1>Features</h1>
+			<div class="row">
+	<div class="col-xs-4">
+		<div class="feature-block">
+			<h4>Real-time insight</h4>
+			<p>See what code is called in real-time as a
+			result of your testing activities</p>
+			<img class="img-responsive img-thumbnail"
+				src="deps/img/feature-thumbnail-real-time-insight.png"/>
+		</div>
+
+		<div class="feature-block">
+			<h4>Works with any testing tool</h4>
+			<p>Code Pulse is testing-tool agnostic and will
+			happily continue to give you coverage information
+			regardless of which tool you're using</p>
+		</div>
+
+		<div class="feature-block">
+			<h4>Separate Recordings</h4>
+			<p>Code Pulse gives you the tools to identify coverage
+			activity based on what you were doing at the time</p>
+			<img class="img-responsive img-thumbnail"
+				src="deps/img/feature-thumbnail-separate-recordings.png"/>
+		</div>
+	</div>
+
+	<div class="col-xs-4">
+		<div class="feature-block">
+			<h4>Detailed coverage information</h4>
+			<p>See coverage information from a high level view
+			all the way down to individual methods</p>
+			<img class="img-responsive img-thumbnail"
+				src="deps/img/feature-thumbnail-detailed-coverage.png"/>
+		</div>
+
+		<div class="feature-block">
+			<h4>Visualizations</h4>
+			<p>See code coverage in a single at-a-glance visualization</p>
+			<img class="img-responsive img-thumbnail"
+				src="deps/img/feature-thumbnail-visualizations.png"/>
+		</div>
+	</div>
+
+	<div class="col-xs-4">
+		<div class="feature-block">
+			<h4>Application Inventory</h4>
+			<p>Understand the structure and dependencies of the
+			monitored application right from the Code Pulse interface</p>
+			<img class="img-responsive img-thumbnail"
+				src="deps/img/feature-thumbnail-application-inventory.png"/>
+		</div>
+
+		<div class="feature-block">
+			<h4>Multi-session traces</h4>
+			<p>No need to worry about doing your testing activity in
+			one session; with Code Pulse you can spread your testing
+			over many sessions and still get coverage data</p>
+		</div>
+
+		<div class="feature-block">
+			<h4>Share/Export</h4>
+			<p>Export your coverage information and share it easily
+			with other people</p>
+			<img class="img-responsive img-thumbnail"
+				src="deps/img/feature-thumbnail-share.png"/>
+		</div>
+	</div>
+</div>
+
+		</div>
+	</article>
+
+
+		</div>
+		<footer>
+	<div class="section">
+
+		<div class="row">
+
+			<div class="col-xs-3">
+				<h4 id="about">Visit Us</h4>
+				<div><a href="https://www.owasp.org/index.php/OWASP_Code_Pulse_Project" target="_blank">OWASP Code Pulse Page</a></div>
+				<div><a href="https://github.com/secdec/codepulse" target="_blank">Github Project Page</a></div>
+				<div><a href="http://securedecisions.com/" target="_blank">Secure Decisions</a></div>
+				<div><a href="http://www.avi.com/" target="_blank">Applied Visions</a></div>
+				<div><a href="http://codedx.com/" target="_blank">Code Dx</a></div>
+			</div>
+
+			<div class="col-xs-2">
+				<h4>Contact Us</h4>
+				<div>
+					<a href="https://twitter.com/secdec" target="_blank"><i class="fa fa-twitter"></i> @secdec</a>
+				</div>
+				<div>
+					<a href="https://github.com/secdec/codepulse/issues" target="_blank">
+						<i class="fa fa-github"></i> create an issue
+					</a>
+				</div>
+				<div>
+					<a href="mailto:codepulse@securedecisions.com" target="_top">
+						<i class="fa fa-envelope"></i> email us
+					</a>
+				</div>
+			</div>
+
+			<div class="col-xs-4">
+				<h4>License</h4>
+				<p>
+					Code Pulse is an
+					<a href="https://www.owasp.org/index.php/OWASP_Code_Pulse_Project" target="_blank">OWASP</a>
+					<a href="https://github.com/secdec/codepulse" target="_blank">open source project</a>
+					licensed under the
+					<a href="http://www.apache.org/licenses/LICENSE-2.0.html" target="_blank">Apache 2.0 License</a>
+				</p>
+			</div>
+
+			<div class="col-xs-3">
+				<p class="branding-content">
+					<a href="http://securedecisions.com/" target="_blank">
+						<img class="img-responsive" src="deps/img/secdec-logo.png"/>
+					</a>
+					&copy; 2014 <a href="http://www.avi.com/" target="_blank">Applied Visions, Inc.</a>
+				</p>
+			</div>
+
+		</div>
+
+		<p class="acknowledgement">
+			Code Pulse is based on research sponsored by the Department of Homeland Security (DHS)
+			Science and Technology Directorate, Cyber Security Division (DHS S&amp;T/CSD), BAA via
+			contract number FA8750-12-C-0219. The views and conclusions contained herein are those
+			of the authors and should not be interpreted as necessarily representing the official
+			policies or endorsements, either expressed or implied, of Department of Homeland
+			Security or the U.S. Government.
+		</p>
+
+</footer>
+
+	</body>
 </html>

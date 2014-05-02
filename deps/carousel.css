@@ -1,0 +1,17 @@
+#carousel { margin-top: 20px; }
+
+.carousel-wrapper {
+	height: 584px;
+	/* adjust with #screenshot-carousel height to account for aspect ratio */
+}
+
+.carousel-caption {
+	background-color: rgba(0,0,0,0.5);
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.carousel-indicators {
+	bottom: 0;
+}
