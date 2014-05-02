@@ -70,8 +70,8 @@
 	transition: opacity 0.3s, visibility 0.3s;
 }
 
-#how-steps .step img {
-	max-width: 60%;
+#how-steps #how-point img, #how-steps #how-monitor img {
+	width: 60%;
 	height: auto;
 }
 
