@@ -1,3 +1,5 @@
+#carousel { margin-top: 20px; }
+
 .carousel-wrapper {
 	height: 584px;
 	/* adjust with #screenshot-carousel height to account for aspect ratio */
