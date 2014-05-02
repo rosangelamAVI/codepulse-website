@@ -59,7 +59,26 @@ handlebars.registerHelper('wrap', function(options){
 handlebars.registerHelper('link', function(context, options){
 	var url = urlData[context] || '#todo'
 
-	var s = "<a href=\"" + url + "\" target=\"_blank\">"
+	var attribs = {
+		target: '_blank'
+	}
+
+	for(var key in options.hash){
+		attribs[key] = options.hash[key]
+	}
+
+	var s = "<a href=\"" + url + "\""
+	// target=\"_blank\">"
+
+	for(var key in attribs){
+		s += ' '
+		s += key
+		s += '="'
+		s += attribs[key]
+		s += '"'
+	}
+
+	s += '>'
 	s += options.fn(this)
 	s += "</a>"
 	return s
