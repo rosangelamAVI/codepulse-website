@@ -10,7 +10,7 @@ footer a {
 }
 
 footer a:hover {
-	color: #00A3FF;
+	color: #E4C1A1;
 	text-decoration: none;
 }
 
@@ -23,10 +23,7 @@ footer .branding-content img {
 	width: 153px;
 }
 
-footer .acknowledgement-header {
-	margin-top: 20px;
-}
-
 footer .acknowledgement {
+	margin-top: 20px;
 	text-align: justify;
 }

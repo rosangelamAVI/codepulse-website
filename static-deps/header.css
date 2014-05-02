@@ -76,12 +76,12 @@ header a:hover {
 }
 .links-list.fancy > li a:hover {
 	/*background-color: #066;*/
-	color: #00A3FF;
+	color: #E4C1A1;
 }
 
 .navigation {
 	background-color: #444;
-	border-bottom: 2px solid lightgray;
+	/*border-bottom: 2px solid lightgray;*/
 }
 
 .navigation-placeholder {
@@ -105,6 +105,7 @@ header.affix .navigation {
 	top: 0;
 	width: 100%;
 	z-index: 100;
+	opacity: 0.95;
 }
 
 header.affix .navigation-placeholder {
