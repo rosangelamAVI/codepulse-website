@@ -1,7 +1,6 @@
 header {
 	background-color: #323232;
 	color: white;
-	padding-top: 10px;
 }
 
 [data-spy=affix]:not(.affix) .when-affixed { display: none; }
@@ -12,7 +11,7 @@ header {
 }
 
 header .branding {
-	line-height: 34px;
+	line-height:50px;
 	font-size: 34px;
 }
 
