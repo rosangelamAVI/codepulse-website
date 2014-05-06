@@ -61,7 +61,7 @@ header a:focus { color: white; text-decoration: none; }
 }
 
 .links-list > li a {
-	font-size: 1.2em;
+	font-size: 1.1em;
 	padding: 4px 6px;
 	display: inline-block;
 }
