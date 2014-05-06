@@ -5,6 +5,7 @@
 	"secdec": "http://securedecisions.com/",
 	"avi": "http://www.avi.com/",
 	"codedx": "http://codedx.com/",
+	"cwevis": "http://cwevis.org/",
 	"contact_email": "mailto:codepulse@securedecisions.com",
 	"license": "http://www.apache.org/licenses/LICENSE-2.0.html",
 	"github": "https://github.com/secdec/codepulse",
