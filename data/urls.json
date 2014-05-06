@@ -1,4 +1,5 @@
 {
+	"documentation":  "https://github.com/secdec/codepulse/wiki",
 	"download":  "https://github.com/secdec/codepulse/releases/tag/1.0.0",
 	"owasp_project": "https://www.owasp.org/index.php/OWASP_Code_Pulse_Project",
 	"secdec": "http://securedecisions.com/",
