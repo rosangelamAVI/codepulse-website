@@ -103,6 +103,7 @@ function generateTemplateOutput(templateName, outputRelPath, templateData){
 
 // generate dist/index.html
 generateTemplateOutput('index', 'index.html', {
+	pageTitle: "Code Pulse | Real-Time Code Coverage",
 	navLinks: require('./data/index-navigation'),
 	includes: [
 		{css: "deps/carousel.css"},
@@ -117,6 +118,7 @@ generateTemplateOutput('index', 'index.html', {
 
 // generate dist/faq.html
 generateTemplateOutput('faq', 'faq.html', {
+	pageTitle: "Code Pulse | FAQ",
 	faqs: faqData,
 	includes: [
 		{js: 'deps/faq.js'}
